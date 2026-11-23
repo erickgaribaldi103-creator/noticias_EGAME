@@ -12,19 +12,60 @@
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-  <!-- =========================================================
-       01 · FRANJA DE UTILIDAD
-       Sin enlace «Volver a EGAME»
-       ========================================================= -->
-  <div class="utility-bar">
-    <div class="container utility-inner">
-      <div class="utility-right">
-        <span>CIUDAD DE MÉXICO · MÉXICO</span>
-        <span class="utility-dot"></span>
-        <span id="todayText">Lunes 23 de noviembre de 2026</span>
-      </div>
+ 
+<!-- ==========================================
+     01 - FECHA, CLIMA Y RELOJ
+========================================== -->
+
+<div class="utility-bar">
+  <div class="container utility-inner">
+
+    <!-- UBICACIÓN Y FECHA -->
+    <div class="utility-right">
+      <span>CIUDAD DE MÉXICO · MÉXICO</span>
+      <span class="utility-dot"></span>
+      <span id="todayText"></span>
     </div>
+
+    <!-- CLIMA Y RELOJ EN TIEMPO REAL -->
+    <div class="egame-weather-clock">
+
+      <!-- ESTADO DEL CLIMA -->
+      <div class="egame-weather">
+        <span id="weatherIcon" class="weather-icon">
+          🌤️
+        </span>
+
+        <div class="weather-data">
+          <span class="widget-label">CLIMA CDMX</span>
+          <strong id="weatherTemp">--°C</strong>
+          <small id="weatherDescription">
+            Consultando...
+          </small>
+        </div>
+      </div>
+
+      <div class="widget-divider"></div>
+
+      <!-- RELOJ DIGITAL -->
+      <div class="egame-clock">
+        <span class="widget-label">HORA LOCAL</span>
+        <strong id="egameClock">--:--:--</strong>
+        <small>Ciudad de México</small>
+      </div>
+
+      <a
+        class="weather-credit"
+        href="https://open-meteo.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Clima: Open-Meteo</a>
+
+    </div>
+
   </div>
+</div>
+
 
   <!-- =========================================================
        02 · CABECERA / IDENTIDAD

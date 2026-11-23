@@ -1,0 +1,16 @@
+NOTICIAS EGAME - versión con imágenes y espacio publicitario
+
+Subir a la RAÍZ del repositorio noticias_EGAME:
+index.html
+styles.css
+script.js
+assets/ciudad.svg
+assets/ciudad-barrio.svg
+assets/metro.svg
+assets/seguridad.svg
+assets/cultura.svg
+assets/cine.svg
+assets/reparto.svg
+
+Los 7 SVG son ilustraciones del prototipo, NO fotografías de los eventos.
+La publicidad es un lugar de muestra, SIN anuncios contratados.
