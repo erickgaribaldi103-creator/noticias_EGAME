@@ -241,3 +241,188 @@ $('#menuButton').addEventListener('click',()=>{
   const expanded=nav.classList.toggle('is-open');
   $('#menuButton').setAttribute('aria-expanded',String(expanded));
 });
+
+
+/* ==========================================
+   12 - CLIMA Y RELOJ NOTICIAS EGAME
+========================================== */
+
+(function iniciarClimaYHoraEGAME() {
+
+    // ZONA HORARIA DE CIUDAD DE MÉXICO
+    const ZONA_HORARIA = "America/Mexico_City";
+
+    // RELOJ DIGITAL
+    const reloj = document.getElementById("egameClock");
+
+    function actualizarReloj() {
+
+        if (!reloj) return;
+
+        const ahora = new Date();
+
+        reloj.textContent = new Intl.DateTimeFormat(
+            "es-MX",
+            {
+                timeZone: ZONA_HORARIA,
+                hour: "2-digit",
+                minute: "2-digit",
+                second: "2-digit",
+                hour12: false
+            }
+        ).format(ahora);
+    }
+
+    actualizarReloj();
+
+    // ACTUALIZACIÓN CADA SEGUNDO
+    setInterval(actualizarReloj, 1000);
+
+
+    // ======================================
+    // ESTADO DEL CLIMA EN CDMX
+    // ======================================
+
+    const temperatura = document.getElementById("weatherTemp");
+    const descripcion = document.getElementById(
+        "weatherDescription"
+    );
+    const icono = document.getElementById("weatherIcon");
+
+    const URL_CLIMA =
+        "https://api.open-meteo.com/v1/forecast" +
+        "?latitude=19.4326" +
+        "&longitude=-99.1332" +
+        "&current=temperature_2m,weather_code,is_day" +
+        "&timezone=America%2FMexico_City";
+
+    let ultimaConsulta = 0;
+    let consultando = false;
+
+    function interpretarClima(codigo, esDia) {
+
+        if (codigo === 0) {
+            return {
+                texto: "Despejado",
+                icono: esDia ? "☀️" : "🌙"
+            };
+        }
+
+        if ([1, 2].includes(codigo)) {
+            return {
+                texto: "Parcialmente nublado",
+                icono: esDia ? "🌤️" : "☁️"
+            };
+        }
+
+        if (codigo === 3) {
+            return { texto: "Nublado", icono: "☁️" };
+        }
+
+        if ([45, 48].includes(codigo)) {
+            return { texto: "Niebla", icono: "🌫️" };
+        }
+
+        if (codigo >= 51 && codigo <= 67) {
+            return { texto: "Lluvia ligera", icono: "🌦️" };
+        }
+
+        if (codigo >= 71 && codigo <= 77) {
+            return { texto: "Nieve", icono: "❄️" };
+        }
+
+        if (codigo >= 80 && codigo <= 82) {
+            return { texto: "Chubascos", icono: "🌧️" };
+        }
+
+        if (codigo >= 95) {
+            return { texto: "Tormenta", icono: "⛈️" };
+        }
+
+        return { texto: "Variable", icono: "🌤️" };
+    }
+
+    async function actualizarClima() {
+
+        if (!temperatura || !descripcion || !icono) return;
+        if (consultando) return;
+
+        consultando = true;
+
+        try {
+
+            const respuesta = await fetch(
+                URL_CLIMA,
+                { cache: "no-store" }
+            );
+
+            if (!respuesta.ok) {
+                throw new Error("Servicio no disponible");
+            }
+
+            const datos = await respuesta.json();
+
+            if (!datos.current ||
+                !Number.isFinite(datos.current.temperature_2m)) {
+                throw new Error("Datos no válidos");
+            }
+
+            const clima = datos.current;
+
+            const estado = interpretarClima(
+                clima.weather_code,
+                clima.is_day === 1
+            );
+
+            temperatura.textContent =
+                Math.round(clima.temperature_2m) + "°C";
+
+            descripcion.textContent = estado.texto;
+            icono.textContent = estado.icono;
+
+            ultimaConsulta = Date.now();
+
+        } catch (error) {
+
+            if (!ultimaConsulta) {
+                temperatura.textContent = "--°C";
+                descripcion.textContent = "No disponible";
+                icono.textContent = "🌡️";
+            }
+
+            console.warn(
+                "Noticias EGAME: clima no disponible.",
+                error
+            );
+
+        } finally {
+            consultando = false;
+        }
+    }
+
+    // PRIMERA CONSULTA
+    actualizarClima();
+
+    // CONSULTAR CADA 15 MINUTOS
+    setInterval(() => {
+        if (!document.hidden) {
+            actualizarClima();
+        }
+    }, 15 * 60 * 1000);
+
+    // ACTUALIZAR AL REGRESAR A LA PESTAÑA
+    document.addEventListener("visibilitychange", () => {
+
+        if (!document.hidden) {
+
+            actualizarReloj();
+
+            if (
+                Date.now() - ultimaConsulta >= 15 * 60 * 1000
+            ) {
+                actualizarClima();
+            }
+        }
+    });
+
+})();

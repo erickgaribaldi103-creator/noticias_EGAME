@@ -357,3 +357,141 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(-
     margin-top: 35px;
     margin-bottom: 65px;
 }
+
+
+/* ==========================================
+   12 - CLIMA Y RELOJ NOTICIAS EGAME
+========================================== */
+
+.utility-bar .utility-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.utility-bar .utility-right {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin: 0;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.egame-weather-clock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    position: relative;
+    background: #253b37;
+    color: #fff2d7;
+
+    border: 1px solid #526b61;
+    border-radius: 12px;
+
+    padding: 11px 14px 20px;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.10);
+}
+
+/* CLIMA */
+.egame-weather {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.weather-icon {
+    font-size: 29px;
+    line-height: 1;
+}
+
+.weather-data,
+.egame-clock {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    white-space: nowrap;
+}
+
+.widget-label {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #d4d2bd;
+}
+
+.weather-data strong {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.weather-data small,
+.egame-clock small {
+    font-size: 10px;
+    color: #c5d5cf;
+}
+
+/* SEPARADOR */
+.widget-divider {
+    width: 1px;
+    height: 38px;
+    background: #54706a;
+}
+
+/* RELOJ */
+.egame-clock strong {
+    font-size: 20px;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 1px;
+    line-height: 1;
+}
+
+/* CRÉDITO DE DATOS */
+.weather-credit {
+    position: absolute;
+    right: 12px;
+    bottom: 4px;
+
+    color: #c5d5cf;
+    font-size: 8px;
+    text-decoration: none;
+}
+
+.weather-credit:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* DISEÑO PARA CELULARES */
+@media (max-width: 768px) {
+
+    .utility-bar .utility-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .utility-bar .utility-right {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .egame-weather-clock {
+        width: 100%;
+        max-width: 360px;
+        justify-content: space-around;
+    }
+
+    .egame-clock strong {
+        font-size: 18px;
+    }
+}
