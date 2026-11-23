@@ -12,33 +12,62 @@
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-  <!-- 01 · FRANJA DE UTILIDAD -->
+  <!-- =========================================================
+       01 · FRANJA DE UTILIDAD
+       Sin enlace «Volver a EGAME»
+       ========================================================= -->
   <div class="utility-bar">
     <div class="container utility-inner">
-      <a class="back-egame" href="../index.html" aria-label="Regresar al portal corporativo EGAME">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
-        Volver a EGAME
-      </a>
-      <div class="utility-right"><span>CIUDAD DE MÉXICO · MÉXICO</span><span class="utility-dot"></span><span id="todayText">Lunes 23 de noviembre de 2026</span></div>
+      <div class="utility-right">
+        <span>CIUDAD DE MÉXICO · MÉXICO</span>
+        <span class="utility-dot"></span>
+        <span id="todayText">Lunes 23 de noviembre de 2026</span>
+      </div>
     </div>
   </div>
 
-  <!-- 02 · CABECERA / IDENTIDAD -->
+  <!-- =========================================================
+       02 · CABECERA / IDENTIDAD
+       ========================================================= -->
   <header class="site-header" id="arriba">
     <div class="container masthead">
-      <div class="masthead-side masthead-left"><span>INFORMACIÓN CON CONTEXTO</span><b>Mirada local, alcance nacional</b></div>
+      <div class="masthead-side masthead-left">
+        <span>INFORMACIÓN CON CONTEXTO</span>
+        <b>Mirada local, alcance nacional</b>
+      </div>
+
       <a class="wordmark" href="./index.html" aria-label="Noticias EGAME, volver a portada">
         <span class="wordmark-pre">DIARIO DIGITAL INDEPENDIENTE</span>
-        <span class="wordmark-main"><span>NOTICIAS</span> <em>EGAME</em></span>
-        <span class="wordmark-slogan">PROYECTO MEXICANO <span aria-hidden="true">✦</span> LA CIUDAD, EN PRIMER PLANO</span>
+        <span class="wordmark-main">
+          <span>NOTICIAS</span> <em>EGAME</em>
+        </span>
+        <span class="wordmark-slogan">
+          PROYECTO MEXICANO <span aria-hidden="true">✦</span> LA CIUDAD, EN PRIMER PLANO
+        </span>
       </a>
-      <div class="masthead-side masthead-right"><span>EDICIÓN DE MUESTRA</span><b>23 NOVIEMBRE 2026</b></div>
+
+      <div class="masthead-side masthead-right">
+        <span>EDICIÓN DE MUESTRA</span>
+        <b>23 NOVIEMBRE 2026</b>
+      </div>
     </div>
+
     <div class="nav-wrap">
       <div class="container nav-inner">
-        <button class="mobile-menu" id="menuButton" type="button" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir secciones">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg> Secciones
+        <button
+          class="mobile-menu"
+          id="menuButton"
+          type="button"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Abrir secciones"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 6h18M3 12h18M3 18h18"/>
+          </svg>
+          Secciones
         </button>
+
         <nav id="mainNav" class="primary-nav" aria-label="Secciones de Noticias EGAME">
           <button class="nav-link is-active" data-category="Todos" type="button">Portada</button>
           <button class="nav-link" data-category="Ciudad" type="button">Ciudad</button>
@@ -49,88 +78,336 @@
           <button class="nav-link" data-category="Deportes" type="button">Deportes</button>
           <button class="nav-link" data-category="Tecnología" type="button">Tecnología</button>
         </nav>
-        <button class="search-trigger" id="searchToggle" type="button" aria-label="Abrir buscador" aria-expanded="false" aria-controls="searchPanel">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.7" cy="10.7" r="6.8"/><path d="m16 16 5 5"/></svg>
+
+        <button
+          class="search-trigger"
+          id="searchToggle"
+          type="button"
+          aria-label="Abrir buscador"
+          aria-expanded="false"
+          aria-controls="searchPanel"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="10.7" cy="10.7" r="6.8"/>
+            <path d="m16 16 5 5"/>
+          </svg>
         </button>
       </div>
+
       <form id="searchPanel" class="container search-panel" role="search" hidden>
         <label for="searchInput">Buscar en esta edición</label>
-        <div class="search-row"><input id="searchInput" type="search" placeholder="Ej. transporte, becas, cultura…" autocomplete="off"><button type="submit">Buscar</button></div>
+        <div class="search-row">
+          <input
+            id="searchInput"
+            type="search"
+            placeholder="Ej. transporte, becas, cultura…"
+            autocomplete="off"
+          >
+          <button type="submit">Buscar</button>
+        </div>
         <p>Este buscador consulta solo las notas incluidas en la demostración.</p>
       </form>
     </div>
   </header>
 
-  <!-- 03 · AVISO EDITORIAL -->
+  <!-- =========================================================
+       03 · AVISO EDITORIAL
+       ========================================================= -->
   <div class="edition-bar">
-    <div class="container edition-inner"><strong>EDICIÓN DEMOSTRATIVA</strong><span>Notas seleccionadas de fuentes externas; fecha de referencia: 23 nov 2026. No son actualizaciones en tiempo real.</span></div>
+    <div class="container edition-inner">
+      <strong>EDICIÓN DEMOSTRATIVA</strong>
+      <span>
+        Notas seleccionadas de fuentes externas; fecha de referencia: 23 nov 2026.
+        No son actualizaciones en tiempo real.
+      </span>
+    </div>
   </div>
 
   <main id="contenido">
-    <!-- 04 · PORTADA: JERARQUÍA PERIODÍSTICA -->
     <div id="homeView">
+
+      
+<!-- PUBLICIDAD 01 - SUPERIOR -->
+<section class="container ad-section ad-top">
+
+  <p class="ad-label">
+    ESPACIO PUBLICITARIO DISPONIBLE
+  </p>
+
+  <div class="ad-banner">
+
+    <div class="ad-banner-mark">EGAME.</div>
+
+    <div class="ad-banner-content">
+      <span class="ad-kicker">PUBLICIDAD</span>
+
+      <h2>Tu negocio puede anunciarse aquí.</h2>
+
+      <p>
+        Espacio para empresas y negocios mexicanos.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+      <!-- =====================================================
+           04 · PORTADA: NOTICIAS PRINCIPALES
+           ===================================================== -->
       <section class="container feature-section" aria-labelledby="coverTitle">
-        <div class="section-kicker"><span>LA PORTADA</span><span class="hairline"></span><span>LO QUE IMPORTA EN LA CAPITAL</span></div>
+        <div class="section-kicker">
+          <span>LA PORTADA</span>
+          <span class="hairline"></span>
+          <span>LO QUE IMPORTA EN LA CAPITAL</span>
+        </div>
         <h1 id="coverTitle" class="sr-only">Noticias y actualidad de Ciudad de México</h1>
+
         <div class="lead-grid">
+          <!-- Contenido generado por script.js -->
           <article class="lead-story" id="leadStory"></article>
           <div class="side-stories" id="sideStories"></div>
+
           <aside class="briefing" aria-labelledby="briefTitle">
-            <div class="brief-header"><span class="small-eyebrow">EN AGENDA</span><h2 id="briefTitle">Para seguir de cerca</h2></div>
+            <div class="brief-header">
+              <span class="small-eyebrow">EN AGENDA</span>
+              <h2 id="briefTitle">Para seguir de cerca</h2>
+            </div>
             <ol id="briefList"></ol>
-            <div class="brief-bottom"><span class="red-dot"></span> Selección editorial de muestra</div>
+            <div class="brief-bottom">
+              <span class="red-dot"></span>
+              Selección editorial de muestra
+            </div>
           </aside>
         </div>
       </section>
 
-      <!-- 05 · CIUDAD / TITULARES RELEVANTES -->
+      <!-- =====================================================
+           05 · CIUDAD / ACTUALIDAD LOCAL
+           ===================================================== -->
       <section class="container content-section" id="ciudad" aria-labelledby="cityHeading">
-        <div class="section-heading"><div><span class="small-eyebrow">MÁS ALLÁ DEL TITULAR</span><h2 id="cityHeading">La ciudad, hoy</h2></div><span class="section-index">01 / ACTUALIDAD LOCAL</span></div>
+        <div class="section-heading">
+          <div>
+            <span class="small-eyebrow">MÁS ALLÁ DEL TITULAR</span>
+            <h2 id="cityHeading">La ciudad, hoy</h2>
+          </div>
+          <span class="section-index">01 / ACTUALIDAD LOCAL</span>
+        </div>
+        <!-- Tarjetas generadas por script.js -->
         <div class="card-grid" id="cityGrid"></div>
       </section>
 
-      <!-- 06 · CULTURA / HISTORIAS Y AGENDA -->
-      <section class="culture-section" id="cultura" aria-labelledby="cultureHeading">
-        <div class="container culture-layout">
-          <div class="culture-main"><div class="section-heading"><div><span class="small-eyebrow">EL LADO VIVO DE LA CIUDAD</span><h2 id="cultureHeading">Cultura y vida cotidiana</h2></div><span class="section-index">02 / PULSO CULTURAL</span></div><div class="culture-grid" id="cultureGrid"></div></div>
-          <aside class="editorial-note"><span class="small-eyebrow">DE LA REDACCIÓN</span><span class="large-quote" aria-hidden="true">“</span><h3>Las historias importantes también están en nuestras calles.</h3><p>Noticias EGAME busca dar espacio a la información útil, los barrios, la movilidad, la cultura y las voces que hacen ciudad.</p><span class="note-signature">LA VISIÓN DE NOTICIAS EGAME</span></aside>
+      <!-- 05B · ESPACIO PARA ANUNCIOS (DISPONIBLE, NO ES PUBLICIDAD PAGADA) -->
+      <section class="container ad-section" aria-label="Espacio publicitario disponible">
+        <p class="ad-label">ESPACIO PUBLICITARIO DISPONIBLE</p>
+        <div class="ad-banner">
+          <div class="ad-banner-mark" aria-hidden="true">EGAME.</div>
+          <div class="ad-banner-content">
+            <span class="ad-kicker">PUBLICIDAD EN NOTICIAS EGAME</span>
+            <h2>Tu marca puede estar aquí.</h2>
+            <p>Próximamente abriremos espacios para anunciantes locales.</p>
+          </div>
+          <span class="ad-size">Formato horizontal adaptable</span>
         </div>
       </section>
 
-      <!-- 07 · NOTAS BREVES DE MENOR PRIORIDAD -->
+      <!-- =====================================================
+           06 · CULTURA / HISTORIAS Y AGENDA
+           ===================================================== -->
+      <section class="culture-section" id="cultura" aria-labelledby="cultureHeading">
+        <div class="container culture-layout">
+          <div class="culture-main">
+            <div class="section-heading">
+              <div>
+                <span class="small-eyebrow">EL LADO VIVO DE LA CIUDAD</span>
+                <h2 id="cultureHeading">Cultura y vida cotidiana</h2>
+              </div>
+              <span class="section-index">02 / PULSO CULTURAL</span>
+            </div>
+            <!-- Tarjetas generadas por script.js -->
+            <div class="culture-grid" id="cultureGrid"></div>
+          </div>
+
+          <aside class="editorial-note">
+            <span class="small-eyebrow">DE LA REDACCIÓN</span>
+            <span class="large-quote" aria-hidden="true">“</span>
+            <h3>Las historias importantes también están en nuestras calles.</h3>
+            <p>
+              Noticias EGAME busca dar espacio a la información útil, los barrios,
+              la movilidad, la cultura y las voces que hacen ciudad.
+            </p>
+            <span class="note-signature">LA VISIÓN DE NOTICIAS EGAME</span>
+          </aside>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           07 · NOTAS BREVES DE MENOR PRIORIDAD
+           ===================================================== -->
       <section class="container content-section latest-section" aria-labelledby="latestHeading">
-        <div class="section-heading"><div><span class="small-eyebrow">OTROS TEMAS EN LA AGENDA</span><h2 id="latestHeading">El resto de la jornada</h2></div><span class="section-index">03 / EN BREVE</span></div>
+        <div class="section-heading">
+          <div>
+            <span class="small-eyebrow">OTROS TEMAS EN LA AGENDA</span>
+            <h2 id="latestHeading">El resto de la jornada</h2>
+          </div>
+          <span class="section-index">03 / EN BREVE</span>
+        </div>
+        <!-- Tarjetas generadas por script.js -->
         <div id="latestList" class="latest-grid"></div>
       </section>
 
-      <!-- 08 · PRÓXIMAS SECCIONES -->
+      <!-- =====================================================
+           08 · PRÓXIMAS SECCIONES
+           ===================================================== -->
       <section class="container upcoming-section" aria-labelledby="comingHeading">
-        <div class="section-heading"><div><span class="small-eyebrow">NUESTRO CRECIMIENTO</span><h2 id="comingHeading">Más miradas en EGAME</h2></div></div>
+        <div class="section-heading">
+          <div>
+            <span class="small-eyebrow">NUESTRO CRECIMIENTO</span>
+            <h2 id="comingHeading">Más miradas en EGAME</h2>
+          </div>
+        </div>
+
         <div class="upcoming-grid">
-          <article class="upcoming-card"><div><span class="upcoming-label">PRÓXIMAMENTE</span><h3>Deportes</h3><p>Resultados, análisis y seguimiento al fútbol mexicano y el deporte local.</p></div><span class="upcoming-symbol" aria-hidden="true">◉</span></article>
-          <article class="upcoming-card dark"><div><span class="upcoming-label">PRÓXIMAMENTE</span><h3>Tecnología</h3><p>Innovación, ciencia, herramientas digitales y el talento que crea en México.</p></div><span class="upcoming-symbol" aria-hidden="true">✳</span></article>
+          <article class="upcoming-card">
+            <div>
+              <span class="upcoming-label">PRÓXIMAMENTE</span>
+              <h3>Deportes</h3>
+              <p>Resultados, análisis y seguimiento al fútbol mexicano y el deporte local.</p>
+            </div>
+            <span class="upcoming-symbol" aria-hidden="true">◉</span>
+          </article>
+
+          <article class="upcoming-card dark">
+            <div>
+              <span class="upcoming-label">PRÓXIMAMENTE</span>
+              <h3>Tecnología</h3>
+              <p>Innovación, ciencia, herramientas digitales y el talento que crea en México.</p>
+            </div>
+            <span class="upcoming-symbol" aria-hidden="true">✳</span>
+          </article>
         </div>
       </section>
 
-      <!-- 09 · COLABORACIONES / CV -->
+
+
+<!-- PUBLICIDAD 02 - INFERIOR -->
+<section class="container ad-section ad-bottom">
+
+  <p class="ad-label">
+    ESPACIO PUBLICITARIO DISPONIBLE
+  </p>
+
+  <div class="ad-banner">
+
+    <div class="ad-banner-mark">EGAME.</div>
+
+    <div class="ad-banner-content">
+
+      <span class="ad-kicker">
+        ANÚNCIATE EN NOTICIAS EGAME
+      </span>
+
+      <h2>Haz crecer tu marca con nosotros.</h2>
+
+      <p>
+        Próximamente: publicidad para negocios,
+        emprendedores y empresas.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+      <!-- =====================================================
+           09 · COLABORACIONES / CV
+           ===================================================== -->
       <section class="collaboration-section" id="colaboraciones" aria-labelledby="collabHeading">
         <div class="container collaboration-layout">
-          <div class="collab-copy"><span class="small-eyebrow">CONSTRUYAMOS UNA REDACCIÓN ABIERTA</span><h2 id="collabHeading">Tu mirada también puede contar historias.</h2><p>Queremos sumar talento para llevar Noticias EGAME más lejos. Si te interesa colaborar en periodismo, fotografía, edición, video o investigación, aquí publicaremos nuestras futuras convocatorias.</p><div class="skills"><span>Redacción</span><span>Reportajes</span><span>Fotografía</span><span>Video</span><span>Datos</span></div></div>
-          <div class="collab-card"><span class="letter-icon" aria-hidden="true">✉</span><h3>Colabora con Noticias EGAME</h3><p>¿Te gustaría formar parte de nuestros próximos proyectos editoriales?</p><div class="mail-placeholder"><span>CORREO PARA ENVIAR CV</span><strong>Próximamente</strong></div><button type="button" class="cv-button" disabled aria-describedby="cvNotice">Enviar mi CV <span aria-hidden="true">↗</span></button><small id="cvNotice">Todavía no recibimos currículums ni hay vacantes abiertas. Anunciaremos el correo oficial en este espacio.</small></div>
+          <div class="collab-copy">
+            <span class="small-eyebrow">CONSTRUYAMOS UNA REDACCIÓN ABIERTA</span>
+            <h2 id="collabHeading">Tu mirada también puede contar historias.</h2>
+            <p>
+              Queremos sumar talento para llevar Noticias EGAME más lejos.
+              Si te interesa colaborar en periodismo, fotografía, edición,
+              video o investigación, aquí publicaremos nuestras futuras convocatorias.
+            </p>
+            <div class="skills">
+              <span>Redacción</span>
+              <span>Reportajes</span>
+              <span>Fotografía</span>
+              <span>Video</span>
+              <span>Datos</span>
+            </div>
+          </div>
+
+          <div class="collab-card">
+            <span class="letter-icon" aria-hidden="true">✉</span>
+            <h3>Colabora con Noticias EGAME</h3>
+            <p>¿Te gustaría formar parte de nuestros próximos proyectos editoriales?</p>
+            <div class="mail-placeholder">
+              <span>CORREO PARA ENVIAR CV</span>
+              <strong>Próximamente</strong>
+            </div>
+            <button type="button" class="cv-button" disabled aria-describedby="cvNotice">
+              Enviar mi CV <span aria-hidden="true">↗</span>
+            </button>
+            <small id="cvNotice">
+              Todavía no recibimos currículums ni hay vacantes abiertas.
+              Anunciaremos el correo oficial en este espacio.
+            </small>
+          </div>
         </div>
       </section>
     </div>
 
-    <!-- 10 · FILTRO Y BUSCADOR -->
+    <!-- =======================================================
+         10 · FILTROS Y BUSCADOR
+         Mantener «Volver a portada»: es interno del periódico.
+         ======================================================= -->
     <section id="resultsView" class="container results-view" hidden aria-live="polite">
-      <div class="section-heading"><div><span class="small-eyebrow">ARCHIVO DE LA EDICIÓN</span><h1 id="resultsTitle">Resultados</h1></div><button id="backToCover" type="button" class="text-back">← Volver a portada</button></div>
+      <div class="section-heading">
+        <div>
+          <span class="small-eyebrow">ARCHIVO DE LA EDICIÓN</span>
+          <h1 id="resultsTitle">Resultados</h1>
+        </div>
+        <button id="backToCover" type="button" class="text-back">← Volver a portada</button>
+      </div>
       <p id="resultsCount" class="result-count"></p>
       <div class="results-grid" id="resultsGrid"></div>
-      <div class="empty-state" id="emptyState" hidden><h2>Sin notas por ahora</h2><p>Esta sección está preparada para nuevas publicaciones de Noticias EGAME.</p></div>
+      <div class="empty-state" id="emptyState" hidden>
+        <h2>Sin notas por ahora</h2>
+        <p>Esta sección está preparada para nuevas publicaciones de Noticias EGAME.</p>
+      </div>
     </section>
   </main>
 
-  <!-- 11 · PIE -->
-  <footer class="site-footer"><div class="container footer-main"><div><a class="footer-logo" href="../index.html">EGAME<span>.</span></a><p>NOTICIAS EGAME · PROYECTO MEXICANO</p><small>Periodismo digital en construcción.</small></div><div class="footer-links"><a href="./index.html">Portada</a><a href="#colaboraciones">Colaboraciones</a><a href="../index.html">Portal EGAME</a></div></div><div class="container footer-bottom"><span>© <span id="year">2026</span> Noticias EGAME</span><span>Edición editorial de demostración. Enlaces a fuentes externas; no implica afiliación.</span></div></footer>
+  <!-- =========================================================
+       11 · PIE DE PÁGINA
+       Sin enlace de regreso al sitio corporativo EGAME
+       ========================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div>
+        <span class="footer-logo">EGAME<span>.</span></span>
+        <p>NOTICIAS EGAME · PROYECTO MEXICANO</p>
+        <small>Periodismo digital en construcción.</small>
+      </div>
+
+      <div class="footer-links">
+        <a href="./index.html">Portada</a>
+        <a href="#colaboraciones">Colaboraciones</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© <span id="year">2026</span> Noticias EGAME</span>
+      <span>Edición editorial de demostración. Enlaces a fuentes externas; no implica afiliación.</span>
+    </div>
+  </footer>
 </body>
 </html>

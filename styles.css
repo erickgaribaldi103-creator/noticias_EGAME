@@ -274,3 +274,86 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(-
   .results-view{padding-top:30px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+
+/* ======================================================
+   09 · MEJORAS VISUALES Y ESPACIO PARA ANUNCIOS
+   ====================================================== */
+.news-card .story-image {
+  border-radius: 4px;
+  outline: 1px solid rgba(54,47,40,.08);
+  box-shadow: 0 7px 20px rgba(33,38,34,.08);
+}
+.news-card--lead .story-image {
+  box-shadow: 0 12px 26px rgba(33,38,34,.15);
+}
+.story-link:hover h2, .story-link:hover h3 { color: var(--red); }
+.story-link h2, .story-link h3 { transition: color .2s ease; }
+.news-card--lead .article-category {
+  background: var(--red);
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 2px;
+}
+.section-kicker { margin-bottom: 22px; }
+.ad-section { margin-bottom: 66px; }
+.ad-label {
+  margin: 0 0 8px;
+  text-align: center;
+  color: #746f66;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .15em;
+}
+.ad-banner {
+  min-height: 190px;
+  background: linear-gradient(125deg, #243a36 0%, #34534b 58%, #5d705e 100%);
+  color: #fff7eb;
+  border-radius: 5px;
+  padding: 28px 35px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+  overflow: hidden;
+}
+.ad-banner::after {
+  content: '';
+  position: absolute;
+  right: -90px;
+  top: -100px;
+  width: 320px;
+  height: 320px;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 50%;
+  box-shadow: 0 0 0 40px rgba(255,255,255,.04), 0 0 0 85px rgba(255,255,255,.035);
+  pointer-events: none;
+}
+.ad-banner-mark {
+  font: 900 clamp(26px,4vw,50px) var(--serif);
+  color: #edd09a;
+  letter-spacing: -.05em;
+  flex: 0 0 auto;
+}
+.ad-banner-content {position:relative;z-index:1;}
+.ad-kicker {font-size:10px;letter-spacing:.18em;font-weight:800;color:#efd4ab;}
+.ad-banner h2 {font: 700 clamp(23px,3vw,36px) var(--serif); margin: 6px 0; letter-spacing: -.03em;}
+.ad-banner p {font-size:13px;color:#e1e7dd;margin:0;}
+.ad-size {font-size:10px;align-self:flex-end;white-space:nowrap;color:#e0e3d8;z-index:1;}
+@media(max-width:700px) {
+ .ad-banner {flex-direction:column;align-items:flex-start;gap:10px;padding:24px;min-height:0;}
+ .ad-size {align-self:flex-start;white-space:normal;}
+ .ad-section {margin-bottom:45px;}
+}
+
+
+/* PUBLICIDAD SUPERIOR */
+.ad-top {
+    margin-top: 30px;
+    margin-bottom: 45px;
+}
+
+/* PUBLICIDAD INFERIOR */
+.ad-bottom {
+    margin-top: 35px;
+    margin-bottom: 65px;
+}
